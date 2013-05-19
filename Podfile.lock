@@ -1,16 +1,26 @@
 PODS:
+  - AFIncrementalStore (0.4.1):
+    - AFNetworking (>= 0.9.0)
+    - InflectorKit
+    - TransformerKit
   - AFNetworking (1.2.1)
+  - InflectorKit (0.0.1)
   - Kiwi (2.1)
   - MagicalRecord (2.1)
+  - TransformerKit (0.2.2)
 
 DEPENDENCIES:
+  - AFIncrementalStore (~> 0.4)
   - AFNetworking (~> 1.2)
   - Kiwi
   - MagicalRecord (~> 2.1)
 
 SPEC CHECKSUMS:
-  AFNetworking: 02a1b682b3c3fa39afd22e725ab8f4a65cb157b6
+  AFIncrementalStore: bbb4f113ef0442aef8901c5b3df9ae646a598970
+  AFNetworking: a44069e3c9c89867544f6639482f155c7e5f9b41
+  InflectorKit: 9dccab02f95541093995adac639342c9eb9e6c12
   Kiwi: 054ef97d0e50c279b21113a0880a906fa153a7fd
   MagicalRecord: 64e7184c240087a45e9588a722eaf05b0ad837f7
+  TransformerKit: c07d1de4a661db2ca420092445750ab4ad67331a
 
 COCOAPODS: 0.19.1
