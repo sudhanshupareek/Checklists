@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B035DCC01748FF360035491D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B035DCBF1748FF360035491D /* UIKit.framework */; };
+		B035DCC21748FF360035491D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B035DCC11748FF360035491D /* Foundation.framework */; };
+		B035DCC41748FF360035491D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B035DCC31748FF360035491D /* CoreGraphics.framework */; };
+		B035DCCA1748FF360035491D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B035DCC81748FF360035491D /* InfoPlist.strings */; };
+		B035DCCC1748FF360035491D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B035DCCB1748FF360035491D /* main.m */; };
+		B035DCD01748FF360035491D /* CKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B035DCCF1748FF360035491D /* CKAppDelegate.m */; };
+		B035DCD21748FF360035491D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B035DCD11748FF360035491D /* Default.png */; };
+		B035DCD41748FF360035491D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B035DCD31748FF360035491D /* Default@2x.png */; };
+		B035DCD61748FF360035491D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B035DCD51748FF360035491D /* Default-568h@2x.png */; };
+		B035DCD91748FF360035491D /* CKMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B035DCD81748FF360035491D /* CKMasterViewController.m */; };
+		B035DCDC1748FF360035491D /* CKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B035DCDB1748FF360035491D /* CKDetailViewController.m */; };
+		B035DCDF1748FF360035491D /* CKMasterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B035DCDD1748FF360035491D /* CKMasterViewController_iPhone.xib */; };
+		B035DCE21748FF360035491D /* CKMasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B035DCE01748FF360035491D /* CKMasterViewController_iPad.xib */; };
+		B035DCE51748FF360035491D /* CKDetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B035DCE31748FF360035491D /* CKDetailViewController_iPhone.xib */; };
+		B035DCE81748FF360035491D /* CKDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B035DCE61748FF360035491D /* CKDetailViewController_iPad.xib */; };
+		B035DCF01748FF360035491D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B035DCEF1748FF360035491D /* SenTestingKit.framework */; };
+		B035DCF11748FF360035491D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B035DCBF1748FF360035491D /* UIKit.framework */; };
+		B035DCF21748FF360035491D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B035DCC11748FF360035491D /* Foundation.framework */; };
+		B035DCFA1748FF360035491D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B035DCF81748FF360035491D /* InfoPlist.strings */; };
+		B035DCFD1748FF360035491D /* ChecklistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B035DCFC1748FF360035491D /* ChecklistsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B035DCF31748FF360035491D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B035DCB41748FF360035491D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B035DCBB1748FF360035491D;
+			remoteInfo = Checklists;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B035DCBC1748FF360035491D /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B035DCBF1748FF360035491D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B035DCC11748FF360035491D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B035DCC31748FF360035491D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B035DCC71748FF360035491D /* Checklists-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Checklists-Info.plist"; sourceTree = "<group>"; };
+		B035DCC91748FF360035491D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B035DCCB1748FF360035491D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B035DCCD1748FF360035491D /* Checklists-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Checklists-Prefix.pch"; sourceTree = "<group>"; };
+		B035DCCE1748FF360035491D /* CKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKAppDelegate.h; sourceTree = "<group>"; };
+		B035DCCF1748FF360035491D /* CKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKAppDelegate.m; sourceTree = "<group>"; };
+		B035DCD11748FF360035491D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B035DCD31748FF360035491D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B035DCD51748FF360035491D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B035DCD71748FF360035491D /* CKMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKMasterViewController.h; sourceTree = "<group>"; };
+		B035DCD81748FF360035491D /* CKMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKMasterViewController.m; sourceTree = "<group>"; };
+		B035DCDA1748FF360035491D /* CKDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKDetailViewController.h; sourceTree = "<group>"; };
+		B035DCDB1748FF360035491D /* CKDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKDetailViewController.m; sourceTree = "<group>"; };
+		B035DCDE1748FF360035491D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CKMasterViewController_iPhone.xib; sourceTree = "<group>"; };
+		B035DCE11748FF360035491D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CKMasterViewController_iPad.xib; sourceTree = "<group>"; };
+		B035DCE41748FF360035491D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CKDetailViewController_iPhone.xib; sourceTree = "<group>"; };
+		B035DCE71748FF360035491D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CKDetailViewController_iPad.xib; sourceTree = "<group>"; };
+		B035DCEE1748FF360035491D /* ChecklistsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChecklistsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B035DCEF1748FF360035491D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B035DCF71748FF360035491D /* ChecklistsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChecklistsTests-Info.plist"; sourceTree = "<group>"; };
+		B035DCF91748FF360035491D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B035DCFB1748FF360035491D /* ChecklistsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChecklistsTests.h; sourceTree = "<group>"; };
+		B035DCFC1748FF360035491D /* ChecklistsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChecklistsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B035DCB91748FF360035491D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B035DCC01748FF360035491D /* UIKit.framework in Frameworks */,
+				B035DCC21748FF360035491D /* Foundation.framework in Frameworks */,
+				B035DCC41748FF360035491D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B035DCEA1748FF360035491D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B035DCF01748FF360035491D /* SenTestingKit.framework in Frameworks */,
+				B035DCF11748FF360035491D /* UIKit.framework in Frameworks */,
+				B035DCF21748FF360035491D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B035DCB31748FF360035491D = {
+			isa = PBXGroup;
+			children = (
+				B035DCC51748FF360035491D /* Checklists */,
+				B035DCF51748FF360035491D /* ChecklistsTests */,
+				B035DCBE1748FF360035491D /* Frameworks */,
+				B035DCBD1748FF360035491D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B035DCBD1748FF360035491D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B035DCBC1748FF360035491D /* Checklists.app */,
+				B035DCEE1748FF360035491D /* ChecklistsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B035DCBE1748FF360035491D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B035DCBF1748FF360035491D /* UIKit.framework */,
+				B035DCC11748FF360035491D /* Foundation.framework */,
+				B035DCC31748FF360035491D /* CoreGraphics.framework */,
+				B035DCEF1748FF360035491D /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B035DCC51748FF360035491D /* Checklists */ = {
+			isa = PBXGroup;
+			children = (
+				B035DCCE1748FF360035491D /* CKAppDelegate.h */,
+				B035DCCF1748FF360035491D /* CKAppDelegate.m */,
+				B035DCD71748FF360035491D /* CKMasterViewController.h */,
+				B035DCD81748FF360035491D /* CKMasterViewController.m */,
+				B035DCDA1748FF360035491D /* CKDetailViewController.h */,
+				B035DCDB1748FF360035491D /* CKDetailViewController.m */,
+				B035DCDD1748FF360035491D /* CKMasterViewController_iPhone.xib */,
+				B035DCE01748FF360035491D /* CKMasterViewController_iPad.xib */,
+				B035DCE31748FF360035491D /* CKDetailViewController_iPhone.xib */,
+				B035DCE61748FF360035491D /* CKDetailViewController_iPad.xib */,
+				B035DCC61748FF360035491D /* Supporting Files */,
+			);
+			path = Checklists;
+			sourceTree = "<group>";
+		};
+		B035DCC61748FF360035491D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B035DCC71748FF360035491D /* Checklists-Info.plist */,
+				B035DCC81748FF360035491D /* InfoPlist.strings */,
+				B035DCCB1748FF360035491D /* main.m */,
+				B035DCCD1748FF360035491D /* Checklists-Prefix.pch */,
+				B035DCD11748FF360035491D /* Default.png */,
+				B035DCD31748FF360035491D /* Default@2x.png */,
+				B035DCD51748FF360035491D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B035DCF51748FF360035491D /* ChecklistsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B035DCFB1748FF360035491D /* ChecklistsTests.h */,
+				B035DCFC1748FF360035491D /* ChecklistsTests.m */,
+				B035DCF61748FF360035491D /* Supporting Files */,
+			);
+			path = ChecklistsTests;
+			sourceTree = "<group>";
+		};
+		B035DCF61748FF360035491D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B035DCF71748FF360035491D /* ChecklistsTests-Info.plist */,
+				B035DCF81748FF360035491D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B035DCBB1748FF360035491D /* Checklists */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B035DD001748FF360035491D /* Build configuration list for PBXNativeTarget "Checklists" */;
+			buildPhases = (
+				B035DCB81748FF360035491D /* Sources */,
+				B035DCB91748FF360035491D /* Frameworks */,
+				B035DCBA1748FF360035491D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Checklists;
+			productName = Checklists;
+			productReference = B035DCBC1748FF360035491D /* Checklists.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B035DCED1748FF360035491D /* ChecklistsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B035DD031748FF360035491D /* Build configuration list for PBXNativeTarget "ChecklistsTests" */;
+			buildPhases = (
+				B035DCE91748FF360035491D /* Sources */,
+				B035DCEA1748FF360035491D /* Frameworks */,
+				B035DCEB1748FF360035491D /* Resources */,
+				B035DCEC1748FF360035491D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B035DCF41748FF360035491D /* PBXTargetDependency */,
+			);
+			name = ChecklistsTests;
+			productName = ChecklistsTests;
+			productReference = B035DCEE1748FF360035491D /* ChecklistsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B035DCB41748FF360035491D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CK;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Shadel Software, Inc.";
+			};
+			buildConfigurationList = B035DCB71748FF360035491D /* Build configuration list for PBXProject "Checklists" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B035DCB31748FF360035491D;
+			productRefGroup = B035DCBD1748FF360035491D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B035DCBB1748FF360035491D /* Checklists */,
+				B035DCED1748FF360035491D /* ChecklistsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B035DCBA1748FF360035491D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B035DCCA1748FF360035491D /* InfoPlist.strings in Resources */,
+				B035DCD21748FF360035491D /* Default.png in Resources */,
+				B035DCD41748FF360035491D /* Default@2x.png in Resources */,
+				B035DCD61748FF360035491D /* Default-568h@2x.png in Resources */,
+				B035DCDF1748FF360035491D /* CKMasterViewController_iPhone.xib in Resources */,
+				B035DCE21748FF360035491D /* CKMasterViewController_iPad.xib in Resources */,
+				B035DCE51748FF360035491D /* CKDetailViewController_iPhone.xib in Resources */,
+				B035DCE81748FF360035491D /* CKDetailViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B035DCEB1748FF360035491D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B035DCFA1748FF360035491D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B035DCEC1748FF360035491D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B035DCB81748FF360035491D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B035DCCC1748FF360035491D /* main.m in Sources */,
+				B035DCD01748FF360035491D /* CKAppDelegate.m in Sources */,
+				B035DCD91748FF360035491D /* CKMasterViewController.m in Sources */,
+				B035DCDC1748FF360035491D /* CKDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B035DCE91748FF360035491D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B035DCFD1748FF360035491D /* ChecklistsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B035DCF41748FF360035491D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B035DCBB1748FF360035491D /* Checklists */;
+			targetProxy = B035DCF31748FF360035491D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B035DCC81748FF360035491D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B035DCC91748FF360035491D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B035DCDD1748FF360035491D /* CKMasterViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B035DCDE1748FF360035491D /* en */,
+			);
+			name = CKMasterViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		B035DCE01748FF360035491D /* CKMasterViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B035DCE11748FF360035491D /* en */,
+			);
+			name = CKMasterViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		B035DCE31748FF360035491D /* CKDetailViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B035DCE41748FF360035491D /* en */,
+			);
+			name = CKDetailViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		B035DCE61748FF360035491D /* CKDetailViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B035DCE71748FF360035491D /* en */,
+			);
+			name = CKDetailViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		B035DCF81748FF360035491D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B035DCF91748FF360035491D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B035DCFE1748FF360035491D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B035DCFF1748FF360035491D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B035DD011748FF360035491D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Checklists/Checklists-Prefix.pch";
+				INFOPLIST_FILE = "Checklists/Checklists-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B035DD021748FF360035491D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Checklists/Checklists-Prefix.pch";
+				INFOPLIST_FILE = "Checklists/Checklists-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B035DD041748FF360035491D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Checklists.app/Checklists";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Checklists/Checklists-Prefix.pch";
+				INFOPLIST_FILE = "ChecklistsTests/ChecklistsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B035DD051748FF360035491D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Checklists.app/Checklists";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Checklists/Checklists-Prefix.pch";
+				INFOPLIST_FILE = "ChecklistsTests/ChecklistsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B035DCB71748FF360035491D /* Build configuration list for PBXProject "Checklists" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B035DCFE1748FF360035491D /* Debug */,
+				B035DCFF1748FF360035491D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B035DD001748FF360035491D /* Build configuration list for PBXNativeTarget "Checklists" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B035DD011748FF360035491D /* Debug */,
+				B035DD021748FF360035491D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B035DD031748FF360035491D /* Build configuration list for PBXNativeTarget "ChecklistsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B035DD041748FF360035491D /* Debug */,
+				B035DD051748FF360035491D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B035DCB41748FF360035491D /* Project object */;
+}
