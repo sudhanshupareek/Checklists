@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		854A82A5BC7F464187ECD73C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 517F294870304AB9BF07B0EB /* libPods.a */; };
 		B035DCC01748FF360035491D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B035DCBF1748FF360035491D /* UIKit.framework */; };
 		B035DCC21748FF360035491D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B035DCC11748FF360035491D /* Foundation.framework */; };
 		B035DCC41748FF360035491D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B035DCC31748FF360035491D /* CoreGraphics.framework */; };
@@ -26,7 +27,8 @@
 		B035DCF11748FF360035491D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B035DCBF1748FF360035491D /* UIKit.framework */; };
 		B035DCF21748FF360035491D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B035DCC11748FF360035491D /* Foundation.framework */; };
 		B035DCFA1748FF360035491D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B035DCF81748FF360035491D /* InfoPlist.strings */; };
-		B035DCFD1748FF360035491D /* ChecklistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B035DCFC1748FF360035491D /* ChecklistsTests.m */; };
+		B0EA606717490164008EA187 /* CKSampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EA606617490164008EA187 /* CKSampleSpec.m */; };
+		C5D14A7C1FAE42F78B3700EF /* libPods-ChecklistsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34694817954D432F89CDACF4 /* libPods-ChecklistsTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0884DC264E064D79875C3897 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		34694817954D432F89CDACF4 /* libPods-ChecklistsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChecklistsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		517F294870304AB9BF07B0EB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B035DCBC1748FF360035491D /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B035DCBF1748FF360035491D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B035DCC11748FF360035491D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,8 +70,8 @@
 		B035DCEF1748FF360035491D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B035DCF71748FF360035491D /* ChecklistsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChecklistsTests-Info.plist"; sourceTree = "<group>"; };
 		B035DCF91748FF360035491D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B035DCFB1748FF360035491D /* ChecklistsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChecklistsTests.h; sourceTree = "<group>"; };
-		B035DCFC1748FF360035491D /* ChecklistsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChecklistsTests.m; sourceTree = "<group>"; };
+		B0EA606617490164008EA187 /* CKSampleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSampleSpec.m; sourceTree = "<group>"; };
+		F779D5DBA1AC41498D87B2FA /* Pods-ChecklistsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChecklistsTests.xcconfig"; path = "Pods/Pods-ChecklistsTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,7 @@
 				B035DCC01748FF360035491D /* UIKit.framework in Frameworks */,
 				B035DCC21748FF360035491D /* Foundation.framework in Frameworks */,
 				B035DCC41748FF360035491D /* CoreGraphics.framework in Frameworks */,
+				854A82A5BC7F464187ECD73C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +93,7 @@
 				B035DCF01748FF360035491D /* SenTestingKit.framework in Frameworks */,
 				B035DCF11748FF360035491D /* UIKit.framework in Frameworks */,
 				B035DCF21748FF360035491D /* Foundation.framework in Frameworks */,
+				C5D14A7C1FAE42F78B3700EF /* libPods-ChecklistsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +107,8 @@
 				B035DCF51748FF360035491D /* ChecklistsTests */,
 				B035DCBE1748FF360035491D /* Frameworks */,
 				B035DCBD1748FF360035491D /* Products */,
+				0884DC264E064D79875C3897 /* Pods.xcconfig */,
+				F779D5DBA1AC41498D87B2FA /* Pods-ChecklistsTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +128,8 @@
 				B035DCC11748FF360035491D /* Foundation.framework */,
 				B035DCC31748FF360035491D /* CoreGraphics.framework */,
 				B035DCEF1748FF360035491D /* SenTestingKit.framework */,
+				517F294870304AB9BF07B0EB /* libPods.a */,
+				34694817954D432F89CDACF4 /* libPods-ChecklistsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,8 +169,7 @@
 		B035DCF51748FF360035491D /* ChecklistsTests */ = {
 			isa = PBXGroup;
 			children = (
-				B035DCFB1748FF360035491D /* ChecklistsTests.h */,
-				B035DCFC1748FF360035491D /* ChecklistsTests.m */,
+				B0EA606617490164008EA187 /* CKSampleSpec.m */,
 				B035DCF61748FF360035491D /* Supporting Files */,
 			);
 			path = ChecklistsTests;
@@ -181,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B035DD001748FF360035491D /* Build configuration list for PBXNativeTarget "Checklists" */;
 			buildPhases = (
+				B42F38641C1C4BEBB469E5BC /* Check Pods Manifest.lock */,
 				B035DCB81748FF360035491D /* Sources */,
 				B035DCB91748FF360035491D /* Frameworks */,
 				B035DCBA1748FF360035491D /* Resources */,
+				86C215B1DC8C4F979FB135A7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,10 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B035DD031748FF360035491D /* Build configuration list for PBXNativeTarget "ChecklistsTests" */;
 			buildPhases = (
+				7968E8A95FD24EEF8CC612EB /* Check Pods Manifest.lock */,
 				B035DCE91748FF360035491D /* Sources */,
 				B035DCEA1748FF360035491D /* Frameworks */,
 				B035DCEB1748FF360035491D /* Resources */,
 				B035DCEC1748FF360035491D /* ShellScript */,
+				C2B3FFC698724B37B0712971 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +282,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7968E8A95FD24EEF8CC612EB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		86C215B1DC8C4F979FB135A7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		B035DCEC1748FF360035491D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +322,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		B42F38641C1C4BEBB469E5BC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		C2B3FFC698724B37B0712971 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ChecklistsTests-resources.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -299,7 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B035DCFD1748FF360035491D /* ChecklistsTests.m in Sources */,
+				B0EA606717490164008EA187 /* CKSampleSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +495,7 @@
 		};
 		B035DD011748FF360035491D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0884DC264E064D79875C3897 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Checklists/Checklists-Prefix.pch";
@@ -436,6 +507,7 @@
 		};
 		B035DD021748FF360035491D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0884DC264E064D79875C3897 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Checklists/Checklists-Prefix.pch";
@@ -447,6 +519,7 @@
 		};
 		B035DD041748FF360035491D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F779D5DBA1AC41498D87B2FA /* Pods-ChecklistsTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Checklists.app/Checklists";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -464,6 +537,7 @@
 		};
 		B035DD051748FF360035491D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F779D5DBA1AC41498D87B2FA /* Pods-ChecklistsTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Checklists.app/Checklists";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -498,6 +572,7 @@
 				B035DD021748FF360035491D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B035DD031748FF360035491D /* Build configuration list for PBXNativeTarget "ChecklistsTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +581,7 @@
 				B035DD051748FF360035491D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
