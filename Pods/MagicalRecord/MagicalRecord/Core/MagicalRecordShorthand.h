@@ -56,7 +56,7 @@
 + (NSArray *) findByAttribute:(NSString *)attribute withValue:(id)searchValue inContext:(NSManagedObjectContext *)context;
 + (NSArray *) findByAttribute:(NSString *)attribute withValue:(id)searchValue andOrderBy:(NSString *)sortTerm ascending:(BOOL)ascending;
 + (NSArray *) findByAttribute:(NSString *)attribute withValue:(id)searchValue andOrderBy:(NSString *)sortTerm ascending:(BOOL)ascending inContext:(NSManagedObjectContext *)context;
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+//#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 + (NSFetchedResultsController *) fetchAllWithDelegate:(id<NSFetchedResultsControllerDelegate>)delegate;
 + (NSFetchedResultsController *) fetchAllWithDelegate:(id<NSFetchedResultsControllerDelegate>)delegate inContext:(NSManagedObjectContext *)context;
 + (NSFetchedResultsController *) fetchAllSortedBy:(NSString *)sortTerm ascending:(BOOL)ascending withPredicate:(NSPredicate *)searchTerm groupBy:(NSString *)groupingKeyPath delegate:(id<NSFetchedResultsControllerDelegate>)delegate;
@@ -65,7 +65,7 @@
 + (NSFetchedResultsController *) fetchAllGroupedBy:(NSString *)group withPredicate:(NSPredicate *)searchTerm sortedBy:(NSString *)sortTerm ascending:(BOOL)ascending inContext:(NSManagedObjectContext *)context;
 + (NSFetchedResultsController *) fetchAllGroupedBy:(NSString *)group withPredicate:(NSPredicate *)searchTerm sortedBy:(NSString *)sortTerm ascending:(BOOL)ascending delegate:(id<NSFetchedResultsControllerDelegate>)delegate;
 + (NSFetchedResultsController *) fetchAllGroupedBy:(NSString *)group withPredicate:(NSPredicate *)searchTerm sortedBy:(NSString *)sortTerm ascending:(BOOL)ascending delegate:(id<NSFetchedResultsControllerDelegate>)delegate inContext:(NSManagedObjectContext *)context;
-#endif
+//#endif
 @end
 @interface NSManagedObject (MagicalRecordShortHand)
 + (NSUInteger) defaultBatchSize;
@@ -74,9 +74,9 @@
 + (NSArray *) executeFetchRequest:(NSFetchRequest *)request inContext:(NSManagedObjectContext *)context;
 + (id) executeFetchRequestAndReturnFirstObject:(NSFetchRequest *)request;
 + (id) executeFetchRequestAndReturnFirstObject:(NSFetchRequest *)request inContext:(NSManagedObjectContext *)context;
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+//#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 + (void) performFetch:(NSFetchedResultsController *)controller;
-#endif
+//#endif
 + (NSEntityDescription *) entityDescription;
 + (NSEntityDescription *) entityDescriptionInContext:(NSManagedObjectContext *)context;
 + (NSArray *) propertiesNamed:(NSArray *)properties;

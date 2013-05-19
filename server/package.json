@@ -1,0 +1,23 @@
+{
+  "name": "checklists",
+  "version": "0.1.0",
+  "main": "app.js",
+  "private": true,
+  "dependencies": {
+    "startup": "~0.1.12",
+    "simple-stack-common": "~0.1.6",
+    "simple-debug": "~1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.9.0",
+    "expect.js": "~0.2.0",
+    "supertest": "~0.6.0"
+  },
+  "scripts": {
+    "test": "NODE_PATH=lib NODE_ENV=test mocha"
+  },
+  "engines": {
+    "node": "~0.10.3",
+    "npm": "~1.2.17"
+  }
+}

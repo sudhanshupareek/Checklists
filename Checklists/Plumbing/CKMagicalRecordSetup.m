@@ -19,26 +19,35 @@ static CKMagicalRecordSetup * autoloadedSetup;
 
 + (void)load
 {
-    autoloadedSetup = [[self alloc] initWithStoreNamed:@"Checklist"];
+    autoloadedSetup = [self new];
 }
 
-- (id)initWithStoreNamed:(NSString *)storeName
++ (CKMagicalRecordSetup *)sharedSetup
+{
+    return autoloadedSetup;
+}
+
+- (id)init
 {
     self = [super init];
     if (self != nil) {
-        self.storeName = storeName;
-
         // Finish Launching
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(setupCoreDataStack)
+//                                                     name:UIApplicationDidFinishLaunchingNotification
+//                                                   object:[UIApplication sharedApplication]];
+
         [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(setupCoreDataStack)
-                                                     name:UIApplicationDidFinishLaunchingNotification
+                                                 selector:@selector(cleanupCoreDataStack)
+                                                     name:UIApplicationDidEnterBackgroundNotification
                                                    object:[UIApplication sharedApplication]];
     }
     return self;
 }
 
-- (void)setupCoreDataStack {
-
+- (void)setupCoreDataStack
+{
+//    [MagicalRecord setupAutoMigratingCoreDataStack];
     NSManagedObjectModel *model = [NSManagedObjectModel MR_defaultManagedObjectModel];
     NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
     
@@ -49,7 +58,7 @@ static CKMagicalRecordSetup * autoloadedSetup;
                               NSMigratePersistentStoresAutomaticallyOption: @(YES)
                               };
     
-    [incrementalStore.backingPersistentStoreCoordinator MR_addSqliteStoreNamed:self.storeName withOptions:options];
+    [incrementalStore.backingPersistentStoreCoordinator MR_addSqliteStoreNamed:@"Checklists" withOptions:options];
     
     [NSPersistentStore setDefaultPersistentStore:incrementalStore];
     [NSPersistentStoreCoordinator MR_setDefaultStoreCoordinator:incrementalStore.persistentStoreCoordinator];
@@ -70,6 +79,11 @@ static CKMagicalRecordSetup * autoloadedSetup;
                                                           [moc2 reset];
                                                       }
                                                   }];
+}
+
+- (void)cleanupCoreDataStack
+{
+    [MagicalRecord cleanUp];
 }
 
 @end

@@ -9,9 +9,10 @@
 #import "CKMasterViewController.h"
 
 #import "CKDetailViewController.h"
+#import "Checklist.h"
 
-@interface CKMasterViewController () {
-    NSMutableArray *_objects;
+@interface CKMasterViewController () <NSFetchedResultsControllerDelegate> {
+    NSFetchedResultsController *_fetchedResultsController;
 }
 @end
 
@@ -33,11 +34,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    self.title = NSLocalizedString(@"CheckIns", nil);
+    
+    _fetchedResultsController = [Checklist fetchAllSortedBy:@"name" ascending:YES withPredicate:nil groupBy:nil delegate:self];
+//    [CKChecklist performFetch:_fetchedResultsController];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,24 +51,28 @@
 
 - (void)insertNewObject:(id)sender
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [MagicalRecord saveUsingCurrentThreadContextWithBlock:^(NSManagedObjectContext *localContext) {
+        Checklist *checklist = [Checklist createInContext:localContext];
+        checklist.name = [[NSDate date] description];
+    } completion:^(BOOL success, NSError *error) {
+        if (success) {
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"Failed...%@", error);
+        }
+    }];
 }
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [[_fetchedResultsController sections] count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [[[_fetchedResultsController sections] objectAtIndex:section] numberOfObjects];
 }
 
 // Customize the appearance of table view cells.
@@ -82,26 +89,26 @@
     }
 
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    Checklist *checklist = (Checklist *)[_fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = checklist.name;
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    // Return NO if you do not want the specified item to be editable.
+//    return YES;
+//}
+//
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+//        [_objects removeObjectAtIndex:indexPath.row];
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+//        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+//    }
+//}
 
 /*
 // Override to support rearranging the table view.
@@ -121,16 +128,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDate *object = _objects[indexPath.row];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    Checklist *checklist = (Checklist *)[_fetchedResultsController objectAtIndexPath:indexPath];
+    NSLog(@"Checklist: %@", checklist);
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    if (!self.detailViewController) {
 	        self.detailViewController = [[CKDetailViewController alloc] initWithNibName:@"CKDetailViewController_iPhone" bundle:nil];
 	    }
-	    self.detailViewController.detailItem = object;
+	    self.detailViewController.detailItem = checklist;
         [self.navigationController pushViewController:self.detailViewController animated:YES];
     } else {
-        self.detailViewController.detailItem = object;
+        self.detailViewController.detailItem = checklist;
     }
+}
+
+#pragma mark - NSFetchedResultsControllerDelegate
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView reloadData];
 }
 
 @end

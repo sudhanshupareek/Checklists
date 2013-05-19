@@ -20,7 +20,7 @@
 }
 
 + (NSManagedObjectModel *)model {
-    return [[NSManagedObjectModel alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Checklist" withExtension:@"xcdatamodeld"]];
+    return [[NSManagedObjectModel alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Checklists" withExtension:@"xcdatamodeld"]];
 }
 
 - (id <AFIncrementalStoreHTTPClient>)HTTPClient {

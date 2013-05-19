@@ -30,6 +30,8 @@
 		B0CA4F83174968F700607227 /* CKChecklistIncrementalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CA4F82174968F700607227 /* CKChecklistIncrementalStore.m */; };
 		B0CA4F861749695F00607227 /* CKChecklistAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CA4F851749695F00607227 /* CKChecklistAPIClient.m */; };
 		B0CA4F8B1749757B00607227 /* CKURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CA4F8A1749757B00607227 /* CKURLCache.m */; };
+		B0CA4F8F174980A600607227 /* Checklist.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CA4F8E174980A600607227 /* Checklist.m */; };
+		B0CA4F9217498BC400607227 /* Checklists.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0CA4F9017498BC400607227 /* Checklists.xcdatamodeld */; };
 		B0D2DF1217495DC300B2AB3C /* CKMagicalRecordSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D2DF1117495DC300B2AB3C /* CKMagicalRecordSetup.m */; };
 		B0EA606717490164008EA187 /* CKSampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EA606617490164008EA187 /* CKSampleSpec.m */; };
 		C5D14A7C1FAE42F78B3700EF /* libPods-ChecklistsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34694817954D432F89CDACF4 /* libPods-ChecklistsTests.a */; };
@@ -80,6 +82,9 @@
 		B0CA4F851749695F00607227 /* CKChecklistAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKChecklistAPIClient.m; path = Plumbing/CKChecklistAPIClient.m; sourceTree = "<group>"; };
 		B0CA4F891749757B00607227 /* CKURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKURLCache.h; path = Initializers/CKURLCache.h; sourceTree = "<group>"; };
 		B0CA4F8A1749757B00607227 /* CKURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKURLCache.m; path = Initializers/CKURLCache.m; sourceTree = "<group>"; };
+		B0CA4F8D174980A600607227 /* Checklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Checklist.h; path = Models/Checklist.h; sourceTree = "<group>"; };
+		B0CA4F8E174980A600607227 /* Checklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Checklist.m; path = Models/Checklist.m; sourceTree = "<group>"; };
+		B0CA4F9117498BC400607227 /* Checklists.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Checklists.xcdatamodel; sourceTree = "<group>"; };
 		B0D2DF1017495DC300B2AB3C /* CKMagicalRecordSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CKMagicalRecordSetup.h; path = Plumbing/CKMagicalRecordSetup.h; sourceTree = "<group>"; };
 		B0D2DF1117495DC300B2AB3C /* CKMagicalRecordSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CKMagicalRecordSetup.m; path = Plumbing/CKMagicalRecordSetup.m; sourceTree = "<group>"; };
 		B0EA606617490164008EA187 /* CKSampleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKSampleSpec.m; sourceTree = "<group>"; };
@@ -149,6 +154,7 @@
 		B035DCC51748FF360035491D /* Checklists */ = {
 			isa = PBXGroup;
 			children = (
+				B0CA4F8C1749808C00607227 /* Models */,
 				B0CA4F881749756A00607227 /* Initializers */,
 				B0D2DF0E17495D9000B2AB3C /* Plumbing */,
 				B035DCCE1748FF360035491D /* CKAppDelegate.h */,
@@ -205,6 +211,16 @@
 				B0CA4F8A1749757B00607227 /* CKURLCache.m */,
 			);
 			name = Initializers;
+			sourceTree = "<group>";
+		};
+		B0CA4F8C1749808C00607227 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0CA4F8D174980A600607227 /* Checklist.h */,
+				B0CA4F8E174980A600607227 /* Checklist.m */,
+				B0CA4F9017498BC400607227 /* Checklists.xcdatamodeld */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		B0D2DF0E17495D9000B2AB3C /* Plumbing */ = {
@@ -410,6 +426,8 @@
 				B0CA4F83174968F700607227 /* CKChecklistIncrementalStore.m in Sources */,
 				B0CA4F861749695F00607227 /* CKChecklistAPIClient.m in Sources */,
 				B0CA4F8B1749757B00607227 /* CKURLCache.m in Sources */,
+				B0CA4F8F174980A600607227 /* Checklist.m in Sources */,
+				B0CA4F9217498BC400607227 /* Checklists.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +650,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B0CA4F9017498BC400607227 /* Checklists.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B0CA4F9117498BC400607227 /* Checklists.xcdatamodel */,
+			);
+			currentVersion = B0CA4F9117498BC400607227 /* Checklists.xcdatamodel */;
+			name = Checklists.xcdatamodeld;
+			path = Models/Checklists.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B035DCB41748FF360035491D /* Project object */;
 }

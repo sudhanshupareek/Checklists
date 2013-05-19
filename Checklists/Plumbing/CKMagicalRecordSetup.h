@@ -10,4 +10,8 @@
 
 @interface CKMagicalRecordSetup : NSObject
 
++ (CKMagicalRecordSetup *)sharedSetup;
+
+- (void)setupCoreDataStack;
+
 @end
