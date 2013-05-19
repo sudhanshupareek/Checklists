@@ -9,10 +9,35 @@
 #import "CKMagicalRecordSetup.h"
 #import "CKChecklistIncrementalStore.h"
 
+static CKMagicalRecordSetup * autoloadedSetup;
+
+@interface CKMagicalRecordSetup ()
+@property (nonatomic, strong) NSString *storeName;
+@end
 
 @implementation CKMagicalRecordSetup
 
-- (void)setupCoreDataStackWithStoreNamed:(NSString *)storeName {
++ (void)load
+{
+    autoloadedSetup = [[self alloc] initWithStoreNamed:@"Checklist"];
+}
+
+- (id)initWithStoreNamed:(NSString *)storeName
+{
+    self = [super init];
+    if (self != nil) {
+        self.storeName = storeName;
+
+        // Finish Launching
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(setupCoreDataStack)
+                                                     name:UIApplicationDidFinishLaunchingNotification
+                                                   object:[UIApplication sharedApplication]];
+    }
+    return self;
+}
+
+- (void)setupCoreDataStack {
 
     NSManagedObjectModel *model = [NSManagedObjectModel MR_defaultManagedObjectModel];
     NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
@@ -24,7 +49,7 @@
                               NSMigratePersistentStoresAutomaticallyOption: @(YES)
                               };
     
-    [incrementalStore.backingPersistentStoreCoordinator MR_addSqliteStoreNamed:storeName withOptions:options];
+    [incrementalStore.backingPersistentStoreCoordinator MR_addSqliteStoreNamed:self.storeName withOptions:options];
     
     [NSPersistentStore setDefaultPersistentStore:incrementalStore];
     [NSPersistentStoreCoordinator MR_setDefaultStoreCoordinator:incrementalStore.persistentStoreCoordinator];
