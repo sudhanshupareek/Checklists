@@ -6,7 +6,10 @@
   "dependencies": {
     "startup": "~0.1.12",
     "simple-stack-common": "~0.1.6",
-    "simple-debug": "~1.1.0"
+    "simple-debug": "~1.1.0",
+    "mongoose": "~3.6.11",
+    "express": "~3.2.4",
+    "base64url": "0.0.4"
   },
   "devDependencies": {
     "mocha": "~1.9.0",

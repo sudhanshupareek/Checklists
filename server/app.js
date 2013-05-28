@@ -1,21 +1,14 @@
 /**
  * Module dependencies.
  */
-var stack = require('simple-stack-common');
+var stack = require('simple-stack-common')
+  , api = require('api');
 
 /**
  * Expose the app
  */
 var app = module.exports = stack();
-
-app.get('*', function(req, res) {
-  res.json({});
-});
-
-app.post('*', function(req, res) {
-  res.status(201);
-  res.send('');
-});
+app.useBefore('router', '', 'subapp: api', api);
 
 app.configure('test', function() {
   app.remove('errorLogger');
